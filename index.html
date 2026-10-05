@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lueur · Estudo de marca</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&family=Hanken+Grotesk:wght@400;500&family=Instrument+Serif:ital@1&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+/* Conceito: portfólio editorial em luz de estúdio. Muito branco, uma coluna larga, imagens como protagonistas, texto curto ao lado. */
+:root{
+  --canvas:#FBFAF8; --paper:#FFFFFF; --panel:#F1ECE6; --ink:#292827; --ink-2:#6B6560; --nude:#C9AFA3; --accent:#7E6154; --line:#E7E1DA;
+  --aube:#E9E8E5; --peau:#ECE4DB; --minuit:#3B2B1F;
+  --display:'Jost','Helvetica Neue',Arial,sans-serif;
+  --body:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
+  --serif:'Instrument Serif',Georgia,serif;
+  --mono:'DM Mono',ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+.wrap{width:100%;max-width:1180px;margin-inline:auto;padding-inline:24px}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+h1,h2,h3{font-family:var(--display);font-weight:300;margin:0;text-wrap:balance}
+h2{font-size:clamp(28px,4vw,44px);line-height:1.12;letter-spacing:.01em}
+h3{font-size:20px;letter-spacing:.02em;font-weight:400}
+p{margin:0;max-width:62ch;text-wrap:pretty}
+em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* topo */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:28px}
+.mark{font-family:var(--display);font-weight:300;letter-spacing:.38em;font-size:15px;text-transform:uppercase}
+
+/* abertura */
+.open{padding-block:56px 40px;display:grid;gap:36px}
+.open h1{font-size:clamp(40px,8vw,104px);line-height:1;letter-spacing:.02em;text-transform:none}
+.open .lead{font-size:clamp(18px,2vw,22px);color:var(--ink-2);max-width:56ch}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px 32px;padding-top:28px;border-top:1px solid var(--line)}
+.meta b{display:block;font-weight:500;font-size:15px;margin-top:4px;color:var(--ink)}
+.cover{margin-top:8px;background:var(--paper);border:1px solid var(--line)}
+.cover img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:60% 50%}
+
+/* seções */
+section{padding-block:clamp(72px,10vw,132px)}
+.head{display:grid;gap:18px;margin-bottom:clamp(36px,5vw,64px)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.stack{display:grid;gap:20px}
+
+/* briefing */
+.brief-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.brief-list div{display:grid;grid-template-columns:150px 1fr;gap:20px;padding-block:20px;border-bottom:1px solid var(--line)}
+.brief-list dt{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);padding-top:4px}
+.brief-list dd{margin:0}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(28px,3.6vw,44px);line-height:1.2;color:var(--accent);max-width:22ch}
+
+/* estética */
+.mood{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.mood figure{margin:0;display:grid;gap:12px}
+.mood img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--panel)}
+.mood figcaption{font-size:15px;color:var(--ink-2)}
+.mood figcaption b{display:block;color:var(--ink);font-weight:500;font-size:16px}
+.bands{background:var(--paper);border-block:1px solid var(--line)}
+
+/* design system */
+.ds{display:grid;gap:clamp(40px,6vw,72px)}
+.sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.sw div{display:grid;gap:10px}
+.sw i{display:block;aspect-ratio:1.15;border:1px solid var(--line)}
+.sw span{font-size:14px;line-height:1.35}
+.sw small{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-2);letter-spacing:.06em}
+.type{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.type div{background:var(--paper);border:1px solid var(--line);padding:24px;display:grid;gap:14px;align-content:space-between;min-height:220px}
+.type .big{font-size:clamp(34px,4vw,52px);line-height:1}
+.comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.comp > div{background:var(--paper);border:1px solid var(--line);padding:28px;display:grid;gap:18px;align-content:start}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:400;font-size:13px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;width:max-content}
+.btn.ghost{background:transparent;color:var(--ink)}
+.chip{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px;letter-spacing:.04em;background:var(--canvas)}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.notes-demo{display:grid;gap:10px}
+.notes-demo div{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-2)}
+.notes-demo hr{flex:1;border:0;border-top:1px solid var(--nude);margin:0}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.rules div{padding:22px 0;border-top:1px solid var(--line);display:grid;gap:8px}
+.rules b{font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:.02em}
+.rules p{font-size:15px;color:var(--ink-2)}
+
+/* processo */
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.paths figure{margin:0;display:grid;gap:14px;align-content:start}
+.paths img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--panel);border:1px solid var(--line)}
+.paths figcaption{font-size:15px;color:var(--ink-2)}
+.paths figcaption b{display:block;color:var(--ink);font-weight:500;font-size:16px;margin-bottom:2px}
+.turn{margin-top:clamp(40px,6vw,72px);padding:clamp(28px,4vw,48px);background:var(--paper);border:1px solid var(--line);display:grid;gap:14px}
+.turn q{font-family:var(--serif);font-style:italic;font-size:clamp(26px,3.2vw,38px);line-height:1.22;color:var(--accent);quotes:none;max-width:30ch}
+
+/* antes e depois */
+.ba{display:grid;gap:clamp(48px,7vw,88px)}
+.ba-item{display:grid;gap:18px}
+.cmp{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);aspect-ratio:3/2;user-select:none;touch-action:pan-y}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--p,50%);width:1px;background:var(--paper);box-shadow:0 0 0 1px rgba(41,40,39,.18);pointer-events:none}
+.cmp .bar::after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:var(--paper);box-shadow:0 2px 12px rgba(41,40,39,.22)}
+.cmp .tag{position:absolute;top:14px;padding:6px 12px;background:var(--paper);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;z-index:2}
+.cmp .tag.l{left:14px}.cmp .tag.r{right:14px}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
+.cmp:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:3px}
+.ba-text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px)}
+.ba-text p{font-size:15.5px;color:var(--ink-2)}
+.ba-text p b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
+.pair{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.pair figure{margin:0;position:relative;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;padding:20px;min-height:340px}
+.pair img{max-height:380px;width:auto;max-width:100%;object-fit:contain}
+.pair figcaption{position:absolute;top:14px;left:14px;padding:6px 12px;background:var(--canvas);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.pair .low img{image-rendering:auto;max-height:340px}
+
+/* finalizações */
+.finish{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:1px solid var(--line)}
+.finish div{padding:26px 28px 26px 0;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.finish b{font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:.02em}
+.finish p{font-size:15px;color:var(--ink-2)}
+.range{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:clamp(40px,6vw,64px)}
+.range figure{margin:0;display:grid;gap:8px}
+.range img{width:100%;aspect-ratio:1;object-fit:contain;background:var(--aube)}
+.range figure:nth-child(2) img{background:var(--panel)}
+.range figure:nth-child(3) img{background:var(--peau)}
+.range figure:nth-child(4) img{background:var(--panel)}
+.range figure:nth-child(5) img{background:var(--peau)}
+.range figure:nth-child(6) img{background:var(--aube)}
+.camp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.camp img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.visit{display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;margin-top:clamp(40px,6vw,64px)}
+
+footer{border-top:1px solid var(--line);padding-block:40px 56px;display:grid;gap:10px;color:var(--ink-2);font-size:14px}
+footer .mark{color:var(--ink)}
+
+@media (max-width:860px){
+  .split,.ba-text,.pair{grid-template-columns:1fr}
+  .mood{grid-template-columns:1fr 1fr}
+  .mood figure:last-child{grid-column:1/-1}
+  .mood figure:last-child img{aspect-ratio:16/10}
+  .brief-list div{grid-template-columns:1fr;gap:4px}
+  .pair figure{min-height:280px}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .mood{grid-template-columns:1fr}
+  .camp{grid-template-columns:1fr}
+  .cmp{aspect-ratio:4/5}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="mark">Lueur</span>
+    <span class="label">Estudo de marca · Jhonatan Carvalho</span>
+  </header>
+
+  <div class="open">
+    <span class="label">Marca conceitual de perfumaria</span>
+    <h1>Uma perfumaria que fica na pele.</h1>
+    <p class="lead">Do primeiro briefing ao site publicado: como dei à Lueur nome, luz, vidro e uma identidade que se reconhece sem precisar de adjetivo.</p>
+    <div class="meta">
+      <div><span class="label">Projeto</span><b>Identidade e site da marca</b></div>
+      <div><span class="label">Papel</span><b>Direção de arte e criação</b></div>
+      <div><span class="label">Idioma</span><b>Português do Brasil</b></div>
+      <div><span class="label">Status</span><b>No ar, como estudo</b></div>
+    </div>
+    <div class="cover"><img src="assets/hero-white.webp" alt="Frasco de perfume Lueur com sua caixa, em estúdio branco, com reflexo de luz no vidro" width="1536" height="1024"></div>
+  </div>
+
+  <section id="briefing">
+    <div class="split">
+      <div class="head" style="margin:0">
+        <span class="label">O briefing</span>
+        <h2>Um perfume que acompanha do dia até a noite.</h2>
+        <p class="quote" style="margin-top:12px">Lueur é a essência que marca por onde passa.</p>
+      </div>
+      <dl class="brief-list" style="margin:0">
+        <div><dt>O pedido</dt><dd>Criar uma landing page editorial para uma marca de perfumes femininos, que mostre o produto e leve à sacola.</dd></div>
+        <div><dt>Quem lê</dt><dd>Mulheres brasileiras que escolhem perfume pela sensação, não pela ficha técnica.</dd></div>
+        <div><dt>A regra</dt><dd>Eu não digo que é sofisticado. Quero que o valor venha do desenho, da luz e do silêncio entre os elementos.</dd></div>
+        <div><dt>O limite</dt><dd>É uma marca fictícia de portfólio. A sacola é demonstração e nada é cobrado.</dd></div>
+      </dl>
+    </div>
+  </section>
+</div>
+
+<div class="bands"><section class="wrap" id="estetica">
+  <div class="head">
+    <span class="label">A escolha de estética</span>
+    <h2>Uma luz que vai do dia até a noite.</h2>
+    <p>Procurei um mundo claro e quieto, que escurece aos poucos, como o dia. O perfume é o único objeto e a luz faz o trabalho de decoração.</p>
+  </div>
+  <div class="mood">
+    <figure><img src="assets/campanha-peau.webp" alt="Mulher segurando um frasco de perfume rosado junto ao peito, em luz de janela"><figcaption><b>De manhã</b>Mostro o perfume na pele, em luz de janela, não em vitrine.</figcaption></figure>
+    <figure><img src="assets/scene-aube.webp" alt="Cena clara com cítricos, pera e flor de laranjeira sobre superfície bege" style="object-position:30% 50%"><figcaption><b>Ao longo do dia</b>Cada perfume leva seus ingredientes: flor, fruta, resina. Sempre em fotografia, nunca em ícone.</figcaption></figure>
+    <figure><img src="assets/campanha-minuit.webp" alt="Mãos borrifando perfume âmbar em luz quente e escura"><figcaption><b>À noite</b>O lado escuro existe para um perfume só, e fica contido nele.</figcaption></figure>
+  </div>
+</section></div>
+
+<div class="wrap">
+  <section id="sistema">
+    <div class="head">
+      <span class="label">Design system</span>
+      <h2>Poucas escolhas, repetidas com cuidado.</h2>
+      <p>O sistema nasceu do nude e do branco. Mostro aqui só o que uso na página, separado entre o que sustenta a marca e o que apoia.</p>
+    </div>
+    <div class="ds">
+      <div class="stack">
+        <h3>Cores</h3>
+        <span class="label">Primárias</span>
+        <div class="sw">
+          <div><i style="background:var(--paper)"></i><span>Branco<small>#FFFFFF</small></span></div>
+          <div><i style="background:var(--ink)"></i><span>Tinta<small>#292827</small></span></div>
+          <div><i style="background:var(--nude)"></i><span>Nude<small>#C9AFA3</small></span></div>
+        </div>
+        <span class="label" style="margin-top:12px">Secundárias</span>
+        <div class="sw">
+          <div><i style="background:var(--canvas)"></i><span>Papel<small>#FBFAF8</small></span></div>
+          <div><i style="background:var(--panel)"></i><span>Painel<small>#F1ECE6</small></span></div>
+          <div><i style="background:var(--accent)"></i><span>Argila<small>#7E6154</small></span></div>
+          <div><i style="background:var(--aube)"></i><span>Aube<small>#E9E8E5</small></span></div>
+          <div><i style="background:var(--peau)"></i><span>Peau<small>#ECE4DB</small></span></div>
+          <div><i style="background:var(--minuit)"></i><span>Minuit<small>#3B2B1F</small></span></div>
+        </div>
+      </div>
+      <div class="stack">
+        <h3>Tipografia</h3>
+        <span class="label">Primárias</span>
+        <div class="type">
+          <div><span class="label">Títulos</span><span class="big" style="font-family:var(--display);font-weight:200;letter-spacing:.08em">LUEUR</span><span style="font-size:14px;color:var(--ink-2)">Jost, fina e espaçada, em caixa alta para a marca.</span></div>
+          <div><span class="label">Leitura</span><span class="big" style="font-family:var(--body);font-size:34px;line-height:1.15">Do dia até a noite.</span><span style="font-size:14px;color:var(--ink-2)">Hanken Grotesk, neutra e confortável.</span></div>
+        </div>
+        <span class="label" style="margin-top:12px">Secundárias</span>
+        <div class="type">
+          <div><span class="label">Toque de voz</span><span class="big" style="font-family:var(--serif);font-style:italic;color:var(--accent)">na pele</span><span style="font-size:14px;color:var(--ink-2)">Instrument Serif itálica, em uma palavra ou frase curta.</span></div>
+          <div><span class="label">Rótulos</span><span class="big" style="font-family:var(--mono);font-size:20px;letter-spacing:.14em;text-transform:uppercase">Notas no tempo</span><span style="font-size:14px;color:var(--ink-2)">DM Mono, pequena, só para legendas.</span></div>
+        </div>
+      </div>
+      <div class="stack">
+        <h3>Componentes</h3>
+        <div class="comp">
+          <div><span class="label">Botões</span><a class="btn" href="#sistema">Conhecer a coleção</a><a class="btn ghost" href="#sistema">Adicionar à sacola</a></div>
+          <div><span class="label">Seleção</span><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip on">Aube</span><span class="chip">Peau</span><span class="chip">Minuit</span><span class="chip">Lin</span></div><span style="font-size:14px;color:var(--ink-2)">Escolha simples, sem caixas pesadas.</span></div>
+          <div><span class="label">Notas no tempo</span><div class="notes-demo"><div>Pera <hr> 0h</div><div>Flor de laranjeira <hr> 4h</div><div>Almíscar <hr> 10h</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="bands"><section class="wrap" id="processo">
+  <div class="head">
+    <span class="label">O processo</span>
+    <h2>Da vontade de fazer algo único à imagem que eu queria.</h2>
+    <p>Comecei com uma ideia, errei a mão e voltei ao que importava.</p>
+  </div>
+  <div class="paths">
+    <figure><img src="assets/hero.webp" alt="Frasco de perfume sobre pedra com um véu rosado ao fundo"><figcaption><b>O começo</b>Eu queria trazer algo único. Escolhi um véu e uma pedra, delicados, mas que serviam para qualquer marca.</figcaption></figure>
+    <figure><img src="assets/p-peau.webp" alt="Perfume Peau fotografado com sua caixa, com reflexo e sombra" style="object-fit:contain;background:var(--peau)"><figcaption><b>O fim</b>Tirei o cenário e fiquei com o essencial: vidro, reflexo, sombra e uma caixa que dá peso de produto.</figcaption></figure>
+  </div>
+  <div class="turn">
+    <span class="label">A ideia</span>
+    <q>Eu queria algo real e impactante: passar a sensação de uma fragrância de verdade.</q>
+    <p>Por isso o vidro precisa parecer vidro, com reflexo e sombra no chão, e a caixa precisa parecer papel. Quando a imagem é real, o perfume deixa de ser promessa e passa a ser presença.</p>
+  </div>
+</section></div>
+
+<div class="wrap">
+  <section id="antes-depois">
+    <div class="head">
+      <span class="label">Antes e depois</span>
+      <h2>O que mudou na imagem.</h2>
+      <p>Arraste a linha para comparar a abertura do site no primeiro rascunho e na versão final.</p>
+    </div>
+    <div class="ba">
+      <div class="ba-item">
+        <div class="cmp" id="cmp1" style="--p:72%">
+          <img src="assets/hero-white.webp" alt="Abertura final: frasco e caixa em estúdio branco" width="1536" height="1024">
+          <img class="before" src="assets/hero.webp" alt="Abertura do primeiro rascunho: frasco sobre pedra com véu rosado" width="1600" height="893" style="object-position:72% 50%;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)">
+          <span class="tag l">Antes</span><span class="tag r">Depois</span>
+          <div class="bar"></div>
+          <input type="range" min="0" max="100" value="72" aria-label="Comparar abertura antes e depois" data-cmp="cmp1">
+        </div>
+        <div class="ba-text">
+          <p><b>Antes</b>Uma cena decorada. O frasco dividia espaço com tecido, pedra e cor, e a imagem servia para qualquer marca.</p>
+          <p><b>Depois</b>Tirei o cenário e deixei o vidro em foco. Fundo branco, caixa ao lado e uma luz que desenha o contorno.</p>
+        </div>
+      </div>
+
+      <div class="ba-item">
+        <div class="pair">
+          <figure class="low"><figcaption>Antes</figcaption><img src="assets/b-aube.webp" alt="Frasco Aube no primeiro render, em baixa resolução, com aparência de bloco de vidro" width="349" height="665"></figure>
+          <figure><figcaption>Depois</figcaption><img src="assets/p-aube.webp" alt="Frasco Aube fotografado com sua caixa, com reflexo e sombra" width="900" height="900"></figure>
+        </div>
+        <div class="ba-text">
+          <p><b>Antes</b>Um render simples, sem caixa e com pouca nitidez. Parecia um recorte colado na página.</p>
+          <p><b>Depois</b>Vidro com reflexo, sombra no chão e uma caixa nude. Suavizei as bordas para o recorte não aparecer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="bands"><section class="wrap" id="final">
+  <div class="head">
+    <span class="label">As finalizações</span>
+    <h2>Os detalhes em que tirei o ruído.</h2>
+  </div>
+  <div class="finish">
+    <div><b>Abertura limpa</b><p>Deixei só o título e o frasco. As notas aparecem depois, quando a pessoa começa a rolar.</p></div>
+    <div><b>Linhas que respeitam o vidro</b><p>Afastei as linhas das notas do frasco, sem encostar.</p></div>
+    <div><b>Imagens sem borda de recorte</b><p>Os frascos têm fundo transparente com margem suave, e assentam em qualquer cor.</p></div>
+    <div><b>Tamanho na medida</b><p>Reduzi os frascos para a página respirar e a leitura vir primeiro.</p></div>
+    <div><b>Detalhe do produto parado</b><p>Deixei a tela de cada perfume estática. Um movimento pequeno atrapalhava a leitura.</p></div>
+    <div><b>Sacola de demonstração</b><p>O fluxo existe do começo ao fim, com aviso claro de que nada é cobrado.</p></div>
+  </div>
+  <div class="range">
+    <figure><img src="assets/p-aube.webp" alt="Perfume Aube com caixa"></figure>
+    <figure><img src="assets/p-peau.webp" alt="Perfume Peau com caixa"></figure>
+    <figure><img src="assets/p-minuit.webp" alt="Perfume Minuit com caixa"></figure>
+    <figure><img src="assets/p-lin.webp" alt="Perfume Lin com caixa"></figure>
+    <figure><img src="assets/p-figue.webp" alt="Perfume Figue com caixa"></figure>
+    <figure><img src="assets/p-velours.webp" alt="Perfume Velours com caixa"></figure>
+  </div>
+  <div class="visit">
+    <a class="btn" href="https://lueur-site.vercel.app" target="_blank" rel="noopener">Ver o site</a>
+    <span style="color:var(--ink-2);font-size:15px">lueur-site.vercel.app</span>
+  </div>
+</section></div>
+
+<div class="wrap">
+  <footer>
+    <span class="mark">Lueur</span>
+    <p>Marca conceitual criada para portfólio. Perfumes, preços e pedidos são fictícios, e as imagens foram geradas por IA.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  document.querySelectorAll('input[data-cmp]').forEach(function(r){
+    var box=document.getElementById(r.getAttribute('data-cmp'));
+    function set(){box.style.setProperty('--p',r.value+'%')}
+    r.addEventListener('input',set);set();
+  });
+})();
+</script>
+
+</body>
+</html>
