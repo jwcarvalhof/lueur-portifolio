@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Lueur · Estudo de marca</title>
+<meta name="description" content="Estudo de caso da Lueur: identidade e site de uma perfumaria conceitual, por Jhonatan Carvalho.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,7 @@
 /* Conceito: portfólio editorial em luz de estúdio. Muito branco, uma coluna larga, imagens como protagonistas, texto curto ao lado. */
 :root{
   --canvas:#FBFAF8; --paper:#FFFFFF; --panel:#F1ECE6; --ink:#292827; --ink-2:#6B6560; --nude:#C9AFA3; --accent:#7E6154; --line:#E7E1DA;
-  --aube:#E9E8E5; --peau:#ECE4DB; --minuit:#3B2B1F;
+  --aube:#EEEBE6; --peau:#E8DCCF; --minuit:#3B2B1F;
   --display:'Jost','Helvetica Neue',Arial,sans-serif;
   --body:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
   --serif:'Instrument Serif',Georgia,serif;
@@ -43,8 +44,8 @@ a{color:inherit}
 .open .lead{font-size:clamp(18px,2vw,22px);color:var(--ink-2);max-width:56ch}
 .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px 32px;padding-top:28px;border-top:1px solid var(--line)}
 .meta b{display:block;font-weight:500;font-size:15px;margin-top:4px;color:var(--ink)}
-.cover{margin-top:8px;background:var(--paper);border:1px solid var(--line)}
-.cover img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:60% 50%}
+.cover{margin-top:8px;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 80px -50px rgba(60,42,30,.35)}
+.cover img{width:100%;aspect-ratio:2000/1032;object-fit:cover}
 
 /* seções */
 section{padding-block:clamp(72px,10vw,132px)}
@@ -79,7 +80,7 @@ section{padding-block:clamp(72px,10vw,132px)}
 .type .big{font-size:clamp(34px,4vw,52px);line-height:1}
 .comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
 .comp > div{background:var(--paper);border:1px solid var(--line);padding:28px;display:grid;gap:18px;align-content:start}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:400;font-size:13px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;width:max-content}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border:1px solid var(--ink);border-radius:999px;background:var(--ink);color:var(--paper);font-family:var(--body);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;width:max-content}
 .btn.ghost{background:transparent;color:var(--ink)}
 .chip{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px;letter-spacing:.04em;background:var(--canvas)}
 .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
@@ -155,6 +156,23 @@ footer .mark{color:var(--ink)}
   .cmp{aspect-ratio:4/5}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* o site, seção por seção */
+.screens{display:grid;gap:clamp(64px,9vw,120px)}
+.scr{display:grid;gap:22px}
+.shot{margin:0;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--paper);box-shadow:0 34px 70px -48px rgba(60,42,30,.4)}
+.shot img{width:100%;height:auto}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:760px}
+.phones .shot{border-radius:18px}
+.scr-text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(20px,5vw,72px);align-items:start}
+.scr-text b{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.02em}
+.scr-text p{color:var(--ink-2);font-size:16px}
+.offscreen{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:860px){
+  .duo,.scr-text,.offscreen{grid-template-columns:1fr}
+  .phones{gap:10px}
+}
 </style>
 
 </head>
@@ -168,14 +186,14 @@ footer .mark{color:var(--ink)}
   <div class="open">
     <span class="label">Marca conceitual de perfumaria</span>
     <h1>Uma perfumaria que fica na pele.</h1>
-    <p class="lead">Do primeiro briefing ao site publicado: como dei à Lueur nome, luz, vidro e uma identidade que se reconhece sem precisar de adjetivo.</p>
+    <p class="lead">Do primeiro briefing ao site no ar: como dei à Lueur nome, luz, vidro e uma identidade que se reconhece sem precisar de adjetivo.</p>
     <div class="meta">
       <div><span class="label">Projeto</span><b>Identidade e site da marca</b></div>
       <div><span class="label">Papel</span><b>Direção de arte e criação</b></div>
-      <div><span class="label">Idioma</span><b>Português do Brasil</b></div>
+      <div><span class="label">Idiomas</span><b>Português e inglês</b></div>
       <div><span class="label">Status</span><b>No ar, como estudo</b></div>
     </div>
-    <div class="cover"><img src="assets/hero-white.webp" alt="Frasco de perfume Lueur com sua caixa, em estúdio branco, com reflexo de luz no vidro" width="1536" height="1024"></div>
+    <div class="cover"><img src="assets/site-abertura.webp" alt="Abertura do site da Lueur: o Aube em luz esculpida, com o título O que fica depois que você sai" width="2000" height="1032"></div>
   </div>
 
   <section id="briefing">
@@ -199,12 +217,12 @@ footer .mark{color:var(--ink)}
   <div class="head">
     <span class="label">A escolha de estética</span>
     <h2>Uma luz que vai do dia até a noite.</h2>
-    <p>Procurei um mundo claro e quieto, que escurece aos poucos, como o dia. O perfume é o único objeto e a luz faz o trabalho de decoração.</p>
+    <p>Procurei um mundo claro e quieto, que escurece aos poucos, como o dia. Cada perfume ganhou uma cena própria, com o frasco deitado de frente, na diagonal, como numa campanha. O fundo conta a fragrância e a luz faz o trabalho de decoração.</p>
   </div>
   <div class="mood">
-    <figure><img src="assets/campanha-peau.webp" alt="Mulher segurando um frasco de perfume rosado junto ao peito, em luz de janela"><figcaption><b>De manhã</b>Mostro o perfume na pele, em luz de janela, não em vitrine.</figcaption></figure>
-    <figure><img src="assets/scene-aube.webp" alt="Cena clara com cítricos, pera e flor de laranjeira sobre superfície bege" style="object-position:30% 50%"><figcaption><b>Ao longo do dia</b>Cada perfume leva seus ingredientes: flor, fruta, resina. Sempre em fotografia, nunca em ícone.</figcaption></figure>
-    <figure><img src="assets/campanha-minuit.webp" alt="Mãos borrifando perfume âmbar em luz quente e escura"><figcaption><b>À noite</b>O lado escuro existe para um perfume só, e fica contido nele.</figcaption></figure>
+    <figure><img src="assets/cena-aube.webp" alt="O Aube deitado entre nuvens de névoa creme, com luz dourada" width="1024" height="1280" loading="lazy"><figcaption><b>De manhã</b>O Aube entre névoa clara e luz dourada. Fresco, limpo, de banho tomado.</figcaption></figure>
+    <figure><img src="assets/cena-peau.webp" alt="O Peau deitado de frente entre nuvens de névoa rosada" width="1024" height="1280" loading="lazy"><figcaption><b>Ao longo do dia</b>O Peau em névoa rosada, macio e próximo, como o cheiro da própria pele.</figcaption></figure>
+    <figure><img src="assets/cena-minuit.webp" alt="O Minuit deitado em pedra escura, envolto em fumaça âmbar e pó dourado" width="1024" height="1280" loading="lazy"><figcaption><b>À noite</b>O lado escuro existe para um perfume só, e fica contido nele: fumaça âmbar e pedra.</figcaption></figure>
   </div>
 </section></div>
 
@@ -213,24 +231,22 @@ footer .mark{color:var(--ink)}
     <div class="head">
       <span class="label">Design system</span>
       <h2>Poucas escolhas, repetidas com cuidado.</h2>
-      <p>O sistema nasceu do nude e do branco. Mostro aqui só o que uso na página, separado entre o que sustenta a marca e o que apoia.</p>
+      <p>As cores seguem um dia de luz na pele, do papel antes do amanhecer à tinta da meia-noite. Mostro aqui só o que uso na página, separado entre o que sustenta a marca e o que apoia.</p>
     </div>
     <div class="ds">
       <div class="stack">
         <h3>Cores</h3>
         <span class="label">Primárias</span>
         <div class="sw">
-          <div><i style="background:var(--paper)"></i><span>Branco<small>#FFFFFF</small></span></div>
+          <div><i style="background:var(--canvas)"></i><span>Papel<small>#FBFAF8</small></span></div>
           <div><i style="background:var(--ink)"></i><span>Tinta<small>#292827</small></span></div>
           <div><i style="background:var(--nude)"></i><span>Nude<small>#C9AFA3</small></span></div>
         </div>
         <span class="label" style="margin-top:12px">Secundárias</span>
         <div class="sw">
-          <div><i style="background:var(--canvas)"></i><span>Papel<small>#FBFAF8</small></span></div>
-          <div><i style="background:var(--panel)"></i><span>Painel<small>#F1ECE6</small></span></div>
+          <div><i style="background:var(--aube)"></i><span>Aube<small>#EEEBE6</small></span></div>
+          <div><i style="background:var(--peau)"></i><span>Peau<small>#E8DCCF</small></span></div>
           <div><i style="background:var(--accent)"></i><span>Argila<small>#7E6154</small></span></div>
-          <div><i style="background:var(--aube)"></i><span>Aube<small>#E9E8E5</small></span></div>
-          <div><i style="background:var(--peau)"></i><span>Peau<small>#ECE4DB</small></span></div>
           <div><i style="background:var(--minuit)"></i><span>Minuit<small>#3B2B1F</small></span></div>
         </div>
       </div>
@@ -238,20 +254,20 @@ footer .mark{color:var(--ink)}
         <h3>Tipografia</h3>
         <span class="label">Primárias</span>
         <div class="type">
-          <div><span class="label">Títulos</span><span class="big" style="font-family:var(--display);font-weight:200;letter-spacing:.08em">LUEUR</span><span style="font-size:14px;color:var(--ink-2)">Jost, fina e espaçada, em caixa alta para a marca.</span></div>
+          <div><span class="label">Títulos e rótulos</span><span class="big" style="font-family:var(--display);font-weight:200;letter-spacing:.08em">LUEUR</span><span style="font-size:14px;color:var(--ink-2)">Jost, fina e espaçada, em caixa alta para a marca e nos rótulos dos frascos.</span></div>
           <div><span class="label">Leitura</span><span class="big" style="font-family:var(--body);font-size:34px;line-height:1.15">Do dia até a noite.</span><span style="font-size:14px;color:var(--ink-2)">Hanken Grotesk, neutra e confortável.</span></div>
         </div>
         <span class="label" style="margin-top:12px">Secundárias</span>
         <div class="type">
-          <div><span class="label">Toque de voz</span><span class="big" style="font-family:var(--serif);font-style:italic;color:var(--accent)">na pele</span><span style="font-size:14px;color:var(--ink-2)">Instrument Serif itálica, em uma palavra ou frase curta.</span></div>
-          <div><span class="label">Rótulos</span><span class="big" style="font-family:var(--mono);font-size:20px;letter-spacing:.14em;text-transform:uppercase">Notas no tempo</span><span style="font-size:14px;color:var(--ink-2)">DM Mono, pequena, só para legendas.</span></div>
+          <div><span class="label">Toque de voz</span><span class="big" style="font-family:var(--serif);font-style:italic;color:var(--accent)">na pele</span><span style="font-size:14px;color:var(--ink-2)">Instrument Serif itálica, em uma frase curta.</span></div>
+          <div><span class="label">Legendas</span><span class="big" style="font-family:var(--mono);font-size:20px;letter-spacing:.14em;text-transform:uppercase">Notas no tempo</span><span style="font-size:14px;color:var(--ink-2)">DM Mono, pequena, só para legendas.</span></div>
         </div>
       </div>
       <div class="stack">
         <h3>Componentes</h3>
         <div class="comp">
-          <div><span class="label">Botões</span><a class="btn" href="#sistema">Conhecer a coleção</a><a class="btn ghost" href="#sistema">Adicionar à sacola</a></div>
-          <div><span class="label">Seleção</span><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip on">Aube</span><span class="chip">Peau</span><span class="chip">Minuit</span><span class="chip">Lin</span></div><span style="font-size:14px;color:var(--ink-2)">Escolha simples, sem caixas pesadas.</span></div>
+          <div><span class="label">Botões</span><a class="btn" href="#site">Adicionar à sacola</a><a class="btn ghost" href="#site">Conhecer a coleção</a></div>
+          <div><span class="label">Seleção</span><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip on">50 ml</span><span class="chip">100 ml</span></div><span style="font-size:14px;color:var(--ink-2)">Escolha simples, sem caixas pesadas.</span></div>
           <div><span class="label">Notas no tempo</span><div class="notes-demo"><div>Pera <hr> 0h</div><div>Flor de laranjeira <hr> 4h</div><div>Almíscar <hr> 10h</div></div></div>
         </div>
       </div>
@@ -259,55 +275,61 @@ footer .mark{color:var(--ink)}
   </section>
 </div>
 
-<div class="bands"><section class="wrap" id="processo">
+<div class="bands"><section class="wrap" id="site">
   <div class="head">
-    <span class="label">O processo</span>
-    <h2>Da vontade de fazer algo único à imagem que eu queria.</h2>
-    <p>Comecei com uma ideia, errei a mão e voltei ao que importava.</p>
+    <span class="label">O site</span>
+    <h2>Seção por seção, como está no ar.</h2>
+    <p>A página tem um ritmo só: abre direto, apresenta a casa, mostra um perfume por vez e termina na campanha.</p>
   </div>
-  <div class="paths">
-    <figure><img src="assets/hero.webp" alt="Frasco de perfume sobre pedra com um véu rosado ao fundo"><figcaption><b>O começo</b>Eu queria trazer algo único. Escolhi um véu e uma pedra, delicados, mas que serviam para qualquer marca.</figcaption></figure>
-    <figure><img src="assets/p-peau.webp" alt="Perfume Peau fotografado com sua caixa, com reflexo e sombra" style="object-fit:contain;background:var(--peau)"><figcaption><b>O fim</b>Tirei o cenário e fiquei com o essencial: vidro, reflexo, sombra e uma caixa que dá peso de produto.</figcaption></figure>
-  </div>
-  <div class="turn">
-    <span class="label">A ideia</span>
-    <q>Eu queria algo real e impactante: passar a sensação de uma fragrância de verdade.</q>
-    <p>Por isso o vidro precisa parecer vidro, com reflexo e sombra no chão, e a caixa precisa parecer papel. Quando a imagem é real, o perfume deixa de ser promessa e passa a ser presença.</p>
+  <div class="screens">
+    <div class="scr">
+      <figure class="shot"><img src="assets/site-casa.webp" alt="Seção A casa: a frase O que importa num perfume é o que ainda está na sua pele às seis da tarde" width="2000" height="1250" loading="lazy"></figure>
+      <div class="scr-text"><b>Abertura direta e A casa</b><p>A foto de abertura é uma tela normal: ao rolar, a frase da casa aparece logo em seguida e as palavras acendem conforme a leitura. Nada prende a rolagem.</p></div>
+    </div>
+    <div class="scr">
+      <div class="duo">
+        <figure class="shot"><img src="assets/site-colecao-aube.webp" alt="Coleção I: o Aube, com nome, preço, notas e a foto da campanha" width="2000" height="1121" loading="lazy"></figure>
+        <figure class="shot"><img src="assets/site-colecao-minuit.webp" alt="Coleção I: o Minuit, com a foto em fumaça âmbar" width="2000" height="1121" loading="lazy"></figure>
+      </div>
+      <div class="scr-text"><b>Coleção I, na horizontal</b><p>Uma tela por perfume. Ao rolar, a próxima entra pela direita e o texto anda junto com a foto. O fundo creme fica igual em todas, então a cor nunca quebra; o escuro do Minuit vive só dentro da foto. Nome e preço no alto, notas logo abaixo, num bloco compacto.</p></div>
+    </div>
+    <div class="scr">
+      <div class="phones">
+        <figure class="shot"><img src="assets/site-celular-1.webp" alt="Celular: o Aube, com a foto inteira entre o nome e as notas" width="780" height="1688" loading="lazy"></figure>
+        <figure class="shot"><img src="assets/site-celular-2.webp" alt="Celular: o Peau" width="780" height="1688" loading="lazy"></figure>
+        <figure class="shot"><img src="assets/site-celular-3.webp" alt="Celular: o Minuit" width="780" height="1688" loading="lazy"></figure>
+      </div>
+      <div class="scr-text"><b>No celular</b><p>A mesma ordem em uma coluna: nome, foto e notas, tudo numa tela. A foto mantém o formato 4:5 em qualquer aparelho, sem corte e sem zoom.</p></div>
+    </div>
+    <div class="scr">
+      <div class="duo">
+        <figure class="shot"><img src="assets/site-selecao.webp" alt="Seleção: cards de Lin, Figue e Velours" width="2000" height="1121" loading="lazy"></figure>
+        <figure class="shot"><img src="assets/site-detalhe.webp" alt="Detalhe do Velours: inspiração, quando usar, tamanho, preço e a curva das notas no tempo" width="2000" height="1250" loading="lazy"></figure>
+      </div>
+      <div class="scr-text"><b>Seleção e detalhe</b><p>Os cards seguem o formato da coleção e cabem numa tela. Ao clicar, o frasco viaja do card até o detalhe na mesma proporção, sem se deformar. Lá, a curva de notas mostra como o perfume muda na pele ao longo do dia.</p></div>
+    </div>
+    <div class="scr">
+      <figure class="shot"><img src="assets/site-campanha.webp" alt="Campanha em bento: o Peau em líquido rosado, o Minuit em veludo e fumaça, o Aube num feixe de sol e a frase Ninguém lembra do frasco" width="1860" height="1470" loading="lazy"></figure>
+      <div class="scr-text"><b>Campanha em bento</b><p>Fotos de campanha com fundos próprios, diferentes das da coleção: líquido, sol e veludo. Cada bloco mantém a proporção da sua imagem, e a frase da marca fecha o conjunto.</p></div>
+    </div>
   </div>
 </section></div>
 
 <div class="wrap">
-  <section id="antes-depois">
+  <section id="processo">
     <div class="head">
-      <span class="label">Antes e depois</span>
-      <h2>O que mudou na imagem.</h2>
-      <p>Arraste a linha para comparar a abertura do site no primeiro rascunho e na versão final.</p>
+      <span class="label">O processo</span>
+      <h2>Da cena decorada ao vidro em foco.</h2>
+      <p>Comecei querendo algo único com véu, pedra e cor, e a imagem servia para qualquer marca. Voltei ao que importava: o frasco.</p>
     </div>
-    <div class="ba">
-      <div class="ba-item">
-        <div class="cmp" id="cmp1" style="--p:72%">
-          <img src="assets/hero-white.webp" alt="Abertura final: frasco e caixa em estúdio branco" width="1536" height="1024">
-          <img class="before" src="assets/hero.webp" alt="Abertura do primeiro rascunho: frasco sobre pedra com véu rosado" width="1600" height="893" style="object-position:72% 50%;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)">
-          <span class="tag l">Antes</span><span class="tag r">Depois</span>
-          <div class="bar"></div>
-          <input type="range" min="0" max="100" value="72" aria-label="Comparar abertura antes e depois" data-cmp="cmp1">
-        </div>
-        <div class="ba-text">
-          <p><b>Antes</b>Uma cena decorada. O frasco dividia espaço com tecido, pedra e cor, e a imagem servia para qualquer marca.</p>
-          <p><b>Depois</b>Tirei o cenário e deixei o vidro em foco. Fundo branco, caixa ao lado e uma luz que desenha o contorno.</p>
-        </div>
-      </div>
-
-      <div class="ba-item">
-        <div class="pair">
-          <figure class="low"><figcaption>Antes</figcaption><img src="assets/b-aube.webp" alt="Frasco Aube no primeiro render, em baixa resolução, com aparência de bloco de vidro" width="349" height="665"></figure>
-          <figure><figcaption>Depois</figcaption><img src="assets/p-aube.webp" alt="Frasco Aube fotografado com sua caixa, com reflexo e sombra" width="900" height="900"></figure>
-        </div>
-        <div class="ba-text">
-          <p><b>Antes</b>Um render simples, sem caixa e com pouca nitidez. Parecia um recorte colado na página.</p>
-          <p><b>Depois</b>Vidro com reflexo, sombra no chão e uma caixa nude. Suavizei as bordas para o recorte não aparecer.</p>
-        </div>
-      </div>
+    <div class="paths">
+      <figure><img src="assets/p-peau.webp" alt="O Peau fotografado com sua caixa, com reflexo e sombra" width="1024" height="1024" loading="lazy" style="object-fit:contain;background:var(--peau)"><figcaption><b>O produto</b>Vidro, reflexo, sombra no chão e uma caixa que dá peso de produto. É a foto que vende.</figcaption></figure>
+      <figure><img src="assets/campanha-peau.webp" alt="O Peau deitado sobre líquido rosado, com ondas ao redor" width="1536" height="864" loading="lazy"><figcaption><b>A campanha</b>O mesmo frasco, deitado de frente, com um fundo que conta a fragrância. É a foto que encanta.</figcaption></figure>
+    </div>
+    <div class="turn">
+      <span class="label">A ideia</span>
+      <q>Eu queria algo real e impactante: passar a sensação de uma fragrância de verdade.</q>
+      <p>Por isso o vidro precisa parecer vidro, com reflexo e sombra, e a caixa precisa parecer papel. Os rótulos são escritos por mim em Jost, no ângulo de cada frasco, para nunca distorcer. Quando a imagem é real, o perfume deixa de ser promessa e passa a ser presença.</p>
     </div>
   </section>
 </div>
@@ -318,26 +340,41 @@ footer .mark{color:var(--ink)}
     <h2>Os detalhes em que tirei o ruído.</h2>
   </div>
   <div class="finish">
-    <div><b>Abertura limpa</b><p>Deixei só o título e o frasco. As notas aparecem depois, quando a pessoa começa a rolar.</p></div>
-    <div><b>Linhas que respeitam o vidro</b><p>Afastei as linhas das notas do frasco, sem encostar.</p></div>
-    <div><b>Imagens sem borda de recorte</b><p>Os frascos têm fundo transparente com margem suave, e assentam em qualquer cor.</p></div>
-    <div><b>Tamanho na medida</b><p>Reduzi os frascos para a página respirar e a leitura vir primeiro.</p></div>
-    <div><b>Detalhe do produto parado</b><p>Deixei a tela de cada perfume estática. Um movimento pequeno atrapalhava a leitura.</p></div>
+    <div><b>Abertura direta</b><p>A foto e o título. A rolagem leva à casa sem nenhuma tela presa no caminho.</p></div>
+    <div><b>Fotos inteiras</b><p>Formato 4:5 fixo em qualquer tela. A imagem nunca é cortada nem esticada.</p></div>
+    <div><b>Mesma escala</b><p>Os três frascos da coleção têm o mesmo tamanho e poses diferentes, sem ficarem iguais.</p></div>
+    <div><b>Rótulos sem distorção</b><p>Nome e marca em Jost, no ângulo do vidro, como no frasco de verdade.</p></div>
+    <div><b>Transição sem deformar</b><p>Do card ao detalhe, o frasco cresce na mesma proporção, e a tela abre sem espera.</p></div>
+    <div><b>Sem numeração</b><p>Tirei os números romanos e os avisos de rolagem. O conteúdo se explica sozinho.</p></div>
+    <div><b>Português e inglês</b><p>Seletor no topo, com a barra em vidro. Textos e imagens trocam juntos.</p></div>
     <div><b>Sacola de demonstração</b><p>O fluxo existe do começo ao fim, com aviso claro de que nada é cobrado.</p></div>
   </div>
   <div class="range">
-    <figure><img src="assets/p-aube.webp" alt="Perfume Aube com caixa"></figure>
-    <figure><img src="assets/p-peau.webp" alt="Perfume Peau com caixa"></figure>
-    <figure><img src="assets/p-minuit.webp" alt="Perfume Minuit com caixa"></figure>
-    <figure><img src="assets/p-lin.webp" alt="Perfume Lin com caixa"></figure>
-    <figure><img src="assets/p-figue.webp" alt="Perfume Figue com caixa"></figure>
-    <figure><img src="assets/p-velours.webp" alt="Perfume Velours com caixa"></figure>
-  </div>
-  <div class="visit">
-    <a class="btn" href="https://lueur-site.vercel.app" target="_blank" rel="noopener">Ver o site</a>
-    <span style="color:var(--ink-2);font-size:15px">lueur-site.vercel.app</span>
+    <figure><img src="assets/p-aube.webp" alt="Perfume Aube com caixa" width="1024" height="1024" loading="lazy"></figure>
+    <figure><img src="assets/p-peau.webp" alt="Perfume Peau com caixa" width="1024" height="1024" loading="lazy"></figure>
+    <figure><img src="assets/p-minuit.webp" alt="Perfume Minuit com caixa" width="1024" height="1024" loading="lazy"></figure>
+    <figure><img src="assets/p-lin.webp" alt="Perfume Lin com caixa" width="1024" height="1024" loading="lazy"></figure>
+    <figure><img src="assets/p-figue.webp" alt="Perfume Figue com caixa" width="1024" height="1024" loading="lazy"></figure>
+    <figure><img src="assets/p-velours.webp" alt="Perfume Velours com caixa" width="1024" height="1024" loading="lazy"></figure>
   </div>
 </section></div>
+
+<div class="wrap">
+  <section id="fora">
+    <div class="offscreen">
+      <figure class="shot"><img src="assets/capa.webp" alt="Capa da apresentação da Lueur: o Aube centralizado com o nome LUEUR atrás, em luz esculpida" width="1624" height="1012" loading="lazy"></figure>
+      <div class="head" style="margin:0">
+        <span class="label">Fora da tela</span>
+        <h2>A mesma luz na apresentação da marca.</h2>
+        <p>A capa e a apresentação usam o frasco do site, a mesma luz esculpida e as cores do dia, para a marca ser reconhecida em qualquer lugar.</p>
+      </div>
+    </div>
+    <div class="visit">
+      <a class="btn" href="https://lueur-site.vercel.app" target="_blank" rel="noopener">Ver o site</a>
+      <span style="color:var(--ink-2);font-size:15px">lueur-site.vercel.app</span>
+    </div>
+  </section>
+</div>
 
 <div class="wrap">
   <footer>
@@ -345,16 +382,5 @@ footer .mark{color:var(--ink)}
     <p>Marca conceitual criada para portfólio. Perfumes, preços e pedidos são fictícios, e as imagens foram geradas por IA.</p>
   </footer>
 </div>
-
-<script>
-(function(){
-  document.querySelectorAll('input[data-cmp]').forEach(function(r){
-    var box=document.getElementById(r.getAttribute('data-cmp'));
-    function set(){box.style.setProperty('--p',r.value+'%')}
-    r.addEventListener('input',set);set();
-  });
-})();
-</script>
-
 </body>
 </html>
